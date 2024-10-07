@@ -3,21 +3,23 @@
     align-items: center
     justify-content: space-evenly
     background-color: #24292e
-    color: #ffffff
+    color: #fff
     padding: 1rem
     position: fixed
     top: 0
     left: 0
     right: 0
     z-index: 1
-
     background-color: #24292e
     padding: 4px 24px
     align-items: center
-
+    
     &--fixed-top
         position: fixed
         top: 0
         left: 0
         right: 0
         z-index: 1
+    
+    @include mmw(768)
+        height: 2.5rem

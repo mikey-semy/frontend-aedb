@@ -4,7 +4,6 @@ const ContentEs: React.FC = () => {
 
 return (
 <>
-  <article className="es__content">
     <div className="es__header">
       <h3 className="es__caption">
         Объем знаний для проверки знаний правил работы в электроустановках до и выше 1000 В в комиссии прокатного
@@ -427,7 +426,6 @@ return (
       <li>На какое расстояние нужно удалиться от места возникновения шагового напряжения? (п.11.6 ИОТ-0-01)</li>
     </ol>
     </div>
-  </article>
 </>
 );
 };

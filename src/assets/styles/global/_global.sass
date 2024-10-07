@@ -1,88 +1,105 @@
 :root
-    font-family: $font-family
-    line-height: $line-height
-    font-weight: $font-weight
+  font-family: $font-family
+  line-height: $line-height
+  font-weight: $font-weight
 
-    color-scheme: $color-scheme
-    color: $color
-    background-color: $background-color
+  color-scheme: $color-scheme
+  color: $color
+  background-color: $background-color
 
-    font-synthesis: $font-synthesis
-    text-rendering: $text-rendering
-    -webkit-font-smoothing: $webkit-font-smoothing
-    -moz-osx-font-smoothing: $moz-osx-font-smoothing
-*
+  font-synthesis: $font-synthesis
+  text-rendering: $text-rendering
+  -webkit-font-smoothing: $webkit-font-smoothing
+  -moz-osx-font-smoothing: $moz-osx-font-smoothing
+
+* 
   user-select: none
-  
-#root
-  width: 100%
+  box-sizing: border-box
 
 html, body
   height: 100%
   margin: 0
   padding: 0
-
-html
-  overflow-y: hidden
-  overflow-x: hidden
+  overflow: hidden
+  
 
 body
-  height: 100%
-  margin: 0
-  padding: 0
-
   background-color: $color-background
   color: $color-text
-
   overflow-y: scroll
   scrollbar-width: thin
   scrollbar-color: $color-secondary $color-background
 
+  
+
   &::-webkit-scrollbar
-    width: 8px
-    
+    width: .5rem
 
   &::-webkit-scrollbar-track
     background: $color-background
-    z-index: 2
 
   &::-webkit-scrollbar-thumb
     background-color: $color-secondary
-    border-radius: 4px
-    z-index: 2
-    
+    border-radius: .25rem
+
 .app-container
-    display: flex
-    flex-direction: column
-    min-height: 100vh
-    min-width: 320px
-    
-.container
-  width: 100%
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  min-width: 20rem
+
+.app-main
+  flex: 1 0 auto
   display: flex
   flex-direction: column
   align-items: center
-  margin: 10px 10px
+  justify-content: center
+  width: 100%
+  max-width: 62.5rem
+  margin: auto
+  padding: 5rem 0 2.5rem 0
 
-.loader
-  border: 8px solid #f3f3f3 /* Светлый фон */
-  border-top: 8px solid #3498db /* Цвет верхней части */
-  border-radius: 50%
-  width: 50px /* Ширина индикатора */
-  height: 50px /* Высота индикатора */
-  animation: spin 1s linear infinite /* Анимация вращения */
-  margin: 20px auto /* Центрирование */
+  @include mmw(768)
+    padding: 2.5rem 0
 
-@keyframes spin
-  0% 
-    transform: rotate(0deg)
-  100% 
-    transform: rotate(360deg)
-
+.content
+  display: flex
+  flex-direction: column
+  border: .0625rem solid #ddd
+  border-radius: .3125rem
+  box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.1)
+  padding: 1.25rem
+  margin: 0 .5rem
 
 h1
-  font-size: 3.2em
+  font-size: 2em
+  font-weight: 500
   line-height: 1.1
+  margin: 0
+
+h2
+  font-size: 1.5em
+  font-weight: 500
+  line-height: 1.2
+  margin: 0
+
+h3
+  font-size: 1em
+  font-weight: 500
+  line-height: 1.3
+  margin: 0
+
+p
+  margin: 0
+  line-height: 1.5
+
+ul, ol
+  margin: 0
+  padding: 0
+  list-style-position: inside
+
+li
+  margin: 0.5rem 0
 
 a
   font-weight: 500
@@ -91,3 +108,12 @@ a
 
   &:hover
     color: #535bf2
+
+  &:focus
+    outline: 2px solid #646cff
+
+  &:active
+    color: #424242
+
+  // &:visited
+  //   color: #6f6f6f

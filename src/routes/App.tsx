@@ -22,9 +22,11 @@ const App: React.FC = () => {
     <div className="app-container">
       <Header />
       <main className="app-main"> 
-        <div className='container'>
-          <Outlet />
-        </div>
+        {/* <div className='container'> */}
+          <div className="content">
+            <Outlet />
+          </div>
+        {/* </div> */}
       </main>
       <Footer />
     </div>
