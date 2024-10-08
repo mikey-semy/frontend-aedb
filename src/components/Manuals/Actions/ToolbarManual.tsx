@@ -1,5 +1,7 @@
 import React from 'react';
 import ModalAddManual from '../Modals/ModalAddManual';
+import ModalCategory from '../Modals/ModalCategory';
+import ModalGroup from '../Modals/ModalGroup';
 
 interface ToolbarManualsProps {
   onUpdate: () => void;
@@ -18,6 +20,8 @@ const ToolbarManuals: React.FC<ToolbarManualsProps> = ({ onUpdate }) => {
   };
   return (
     <div className='manual__toolbar'>
+      <ModalCategory onSuccess={handleUpdateItems}/>
+      <ModalGroup onSuccess={handleUpdateItems}/>
       <ModalAddManual onSuccess={handleUpdateItems}/>
     </div>
   );
